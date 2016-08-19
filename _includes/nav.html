@@ -1,0 +1,45 @@
+<div class="row">
+
+  <!-- NAVIGATION -->
+  <div class="col-md-10">
+    <div id="nav-wrap">
+      <div id="nav">
+        {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+        {% for p in navigation_pages %}
+          {% if p.navigation_weight %}
+
+            <span {% if p.url == page.url %}class="active"{% endif %}>
+              <a href="{{ p.url }}">
+              <i class="fa {{ p.navigation_icon }}"></i> {{ p.title }}
+            </a></span>
+
+            {% if forloop.rindex > 1 %}
+              <span class="separator">&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</span>
+            {% endif %}
+
+          {% endif %}
+        {% endfor %}
+      </div><!-- end nav -->
+    </div><!-- end nav.wrap -->
+  </div><!-- end col -->
+
+  <!-- SOCIAL -->
+  <div class="col-md-2">
+    <a class="btn btn-sm btn-social-icon btn-github" href="mailto:&#106;&#097;&#099;&#105;&#110;&#116;&#111;&#046;&#097;&#114;&#105;&#097;&#115;&#064;&#117;&#099;&#108;&#109;&#046;&#101;&#115;">
+      <i class="fa fa-envelope-o"></i>
+    </a>
+    <a class="btn btn-sm btn-social-icon btn-github" href="http://es.linkedin.com/in/jacintoarias/en">
+      <i class="fa fa-linkedin"></i>
+    </a>
+    <a class="btn btn-sm btn-social-icon btn-github" href="http://github.com/jacintoarias">
+      <i class="fa fa-github"></i>
+    </a>
+  </div><!-- end col -->
+</div><!-- end row -->
+
+<!-- SPAN ROW -->
+<div class="row">
+  <div class="col-md-12">
+    <br>
+  </div>
+</div><!-- end row -->
