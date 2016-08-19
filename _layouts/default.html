@@ -2,15 +2,8 @@
 
 <html>
     <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="Jacinto Arias personal website. Comprehensive publication list,
-      projects and research interests on Data Science, Data Mining and Machine Learning.">
-
       {% include head.html %}
-
-      <title>Jacinto Arias&nbsp;Academic Website</title>
-
+      <title>Jacinto Arias Site - {{page.title}}</title>
     </head>
 
     <body>
@@ -22,20 +15,8 @@
 
         <!-- BANNER -->
         <div class="container-fluid" id="banner-wrap">
-
-          {% if page.banner %}
-          <style type="text/css">
-            #banner-wrap {
-            background-image: url(assets/{{page.banner}}) !important;
-            background-position: center !important;
-            background-repeat: no-repeat;
-            }
-          </style>
-
-          <div class="banner-header"></div>
-          {% endif %}
-
-        </div><!-- end container -->
+          {% if page.banner %} {% include banner.html %} {% endif %}
+        </div>
 
         <main class="container">
             <br>
@@ -48,6 +29,9 @@
         <footer class="container-fluid" id="footer-container">
            {% include footer.html %}
         </footer>
+
+        {% include scriptLoader.html %}
+
     </body>
 
 </html>
