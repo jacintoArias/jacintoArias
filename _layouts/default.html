@@ -25,19 +25,14 @@
 
           {% if page.banner %}
           <style type="text/css">
-            .banner-header {
+            #banner-wrap {
             background-image: url(assets/{{page.banner}}) !important;
-            background-position: 0 0 !important;
+            background-position: center !important;
+            background-repeat: no-repeat;
             }
           </style>
 
-          <div class="row">
-            <div class="col-md-12 hidden-xs">
-              <div class="container">
-                <div class="banner-header"></div>
-              </div>
-            </div><!-- end col -->
-          </div><!-- end row -->
+          <div class="banner-header"></div>
           {% endif %}
 
         </div><!-- end container -->
