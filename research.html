@@ -58,16 +58,37 @@ I spend most of my spare time dealing with open datasets from different domains 
     <hr>
     <h3>Publications</h3>
     Next I keep an updated reference of my publications, please check the supplement pages available for each work if you are looking for additional results or software and data to reproduce our experiments (or use them as a practitioner). Of course you can contact me if you need more information of resources.
-    <br>
-    <span style="font-size:11px">*The list is automatically generated from bibtex source using a modified version of <a href="https://code.google.com/p/bibtex-js/" target="_blank">this javascript library (bibtex-js)</a>, my sincere gratitude to the author.</span>
-    </p>
     <h3>International Journals</h3>
-    <textarea id="bibtex_input1" style="display:none;"></textarea>
-    <div id="bibtex_display1"></div>
-    <br>
+    <ul style="list-style-type:none">
+      {% for paper in site.data.journal_papers %}
+        <li style="padding-bottom:5px;">
+          <strong>({{paper.year}}) {{paper.title}}</strong>
+          <br>
+          {{paper.author}}. {{paper.journal}}. {{paper.volume}}. {{paper.pages}}.
+          <br>
+        </li>
+        &nbsp; &nbsp;
+        <a class="btn btn-xs btn-success" href="{{paper.link}}" target="_blank">View Online</a>
+        {% if paper.supplement %} <a class="btn btn-xs btn-warning" href="{{paper.supplement}}" target="_blank">Supplement Site</a> {% endif %}
+        <br><br>
+      {% endfor %}
+    </ul>
+
     <h3>Conference Papers</h3>
-    <textarea id="bibtex_input2" style="display:none;"></textarea>
-    <div id="bibtex_display2"></div>
+    <ul style="list-style-type:none">
+      {% for paper in site.data.conference_papers %}
+        <li style="padding-bottom:5px;">
+          <strong>({{paper.year}}) {{paper.title}}</strong>
+          <br>
+          {{paper.author}}. {{paper.journal}}. {{paper.volume}}. {{paper.pages}}.
+          <br>
+        </li>
+        &nbsp; &nbsp;
+        <a class="btn btn-xs btn-success" href="{{paper.link}}" target="_blank">View Online</a>
+        {% if paper.supplement %} <a class="btn btn-xs btn-warning" href="{{paper.supplement}}" target="_blank">Supplement Site</a> {% endif %}
+        <br><br>
+      {% endfor %}
+    </ul>
   </div><!-- end col -->
 </div><!-- end row -->
 
@@ -76,18 +97,9 @@ I spend most of my spare time dealing with open datasets from different domains 
     <hr>
     <h3>Research Projects</h3>
     <ul>
-      <li>
-      PGM-SDA-UCLM (Probabilistic Graphical Models for Scalable Data Analytics). Supporting institution: Spanish Government (MINECO) Department (TIN2013-46638-C3). From January 2014. Project Manager: José Miguel Puerta.
-      </li>
-      <br>
-      <li>
-      Computational Intelligence: Data Mining Applications. Supporting institution: Castilla-La Mancha Regional Goverment (JCCM) (PEII-2014-049-P). From 27/09/2014 to 26/09/2016. Project Manager: José Miguel Puerta Callejón.
-      </li>
-      <br>
-      <li>
-      MD-PGMs-UCLM (Data Mining with PGMs: New algorithms and applications). Supporting institution: Spanish CICYT Department (TIN2010-20900-C04-03). From January 2010 to September 2014. Project Manager: José Antonio Gámez.
-      </li>
-      <br>
+      {% for project in site.data.research_projects %}
+      <li><strong>{{project.name}}</strong> {{project.title}} Supporting Institution: {{project.institution}}. {{project.dates}}. Project Manager: {{project.manager}}</li>
+      {% endfor %}
     </ul>
     <hr>
   </div><!-- end col -->
