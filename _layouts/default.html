@@ -23,6 +23,23 @@
         <!-- BANNER -->
         <div class="container-fluid" id="banner-wrap">
 
+          {% if page.banner %}
+          <style type="text/css">
+            .banner-header {
+            background-image: url(assets/{{page.banner}}) !important;
+            background-position: 0 0 !important;
+            }
+          </style>
+
+          <div class="row">
+            <div class="col-md-12 hidden-xs">
+              <div class="container">
+                <div class="banner-header"></div>
+              </div>
+            </div><!-- end col -->
+          </div><!-- end row -->
+          {% endif %}
+
         </div><!-- end container -->
 
         <main class="container">
