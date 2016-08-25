@@ -33,31 +33,19 @@ navigation_icon: fa-graduation-cap
   </div><!-- end col -->
 
   <div class="col-md-8">
-<!-- START OF THE RESEARCH PARAGRAPH -->
-<h3>Research Activity and Interests</h3>
-<p>
-I am a member of the <a href="http://www.dsi.uclm.es/simd/" target="_blank" title="">Intelligent Systems and Data Mining</a>&nbsp;group at the <a href="http://www.i3a.uclm.es/" target="_blank" title="">Albacete Research Institute for Informatics.</a>
-<br>
-<br>
-My main areas of interests are Machine Learning and Data Mining focusing on probabilistic methods, and especially on those based on Bayesian Networks. I began my predoctoral research working on scalable learning of Probabilistic Graphical Models and applications to specific problems like supervised classification.
-<br>
-<br>
-Right now I focus my research (PhD Thesis) on High Dimensional and Large Scale and Big Data approaches for PGM learning via distributed programming paradigms such as MapReduce.
-Most of my work is done focusing on the Hadoop and Spark platforms, and how Bayesian Networks can fit this technologies. I am also interested in applications of PGMs to specific domains such as standard or muti-label and multi-dimensional classification.
-</p>
-<p>
-In addition to my main research topics I am very interested in the current Data Science software ecosystem, participating actively in many open source projects and communities.
-I spend most of my spare time dealing with open datasets from different domains and competitions.
-</p>
-<!-- END OF THE RESEARCH PARAGRAPH -->
+
+    {% include text/research_interests.html %}
+
   </div><!-- end col -->
 </div><!-- end row -->
 
 <div class="row">
   <div class="col-md-12">
+
     <hr>
-    <h3>Publications</h3>
-    Next I keep an updated reference of my publications, please check the supplement pages available for each work if you are looking for additional results or software and data to reproduce our experiments (or use them as a practitioner). Of course you can contact me if you need more information of resources.
+    {% include text/research_publications.html %}
+
+
     <h3>International Journals</h3>
     <ul style="list-style-type:none">
       {% for paper in site.data.journal_papers %}
