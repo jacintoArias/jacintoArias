@@ -1,20 +1,6 @@
 <h3>Research Profiles</h3>
 <ul>
-
-<li><a href="http://scholar.google.es/citations?user=RDgzhsAAAAAJ" title="">
-Scholar Google
-</a></li>
-
-<li><a href="http://www.scopus.com/authid/detail.url?authorId=55873292300" title="">
-Scopus
-</a></li>
-
-<li><a href="http://www.researchgate.net/profile/Jacinto_Arias" title="">
-ResearchGate
-</a></li>
-
-<li><a href="http://www.informatik.uni-trier.de/~ley/pers/hd/a/Arias:Jacinto.html" title="">
-DBLP
-</a></li>
-
+{% for p in site.data.research_profiles %}
+  <li><a href="{{p.url}}">{{p.name}}</a></li>
+{% endfor %}
 </ul>

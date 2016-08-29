@@ -1,0 +1,8 @@
+- name: Scholar Google
+  url: http://scholar.google.es/citations?user=RDgzhsAAAAAJ
+- name: Scopus
+  url: http://www.scopus.com/authid/detail.url?authorId=55873292300
+- name: ResearchGate
+  url: http://www.researchgate.net/profile/Jacinto_Arias
+- name: DBLP
+  url: http://www.informatik.uni-trier.de/~ley/pers/hd/a/Arias:Jacinto.html
