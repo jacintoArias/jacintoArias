@@ -1,0 +1,6 @@
+<h3>Research Projects</h3>
+<ul>
+  {% for project in site.data.research_projects %}
+  <li><strong>{{project.name}}</strong> {{project.title}} Supporting Institution: {{project.institution}}. {{project.dates}}. Project Manager: {{project.manager}}</li>
+  {% endfor %}
+</ul>

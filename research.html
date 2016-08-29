@@ -9,27 +9,9 @@ navigation_icon: fa-graduation-cap
 <div class="row">
 
   <div class="col-md-4">
-    <!-- RESEARCH PROFILES -->
-    <h3>Research Profiles</h3>
-    <ul>
 
-    <li><a href="http://scholar.google.es/citations?user=RDgzhsAAAAAJ" title="">
-    Scholar Google
-    </a></li>
+    {% include snippets/research_profiles.html %}
 
-    <li><a href="http://www.scopus.com/authid/detail.url?authorId=55873292300" title="">
-    Scopus
-    </a></li>
-
-    <li><a href="http://www.researchgate.net/profile/Jacinto_Arias" title="">
-    ResearchGate
-    </a></li>
-
-    <li><a href="http://www.informatik.uni-trier.de/~ley/pers/hd/a/Arias:Jacinto.html" title="">
-    DBLP
-    </a></li>
-
-    </ul>
   </div><!-- end col -->
 
   <div class="col-md-8">
@@ -44,51 +26,21 @@ navigation_icon: fa-graduation-cap
 
     <hr>
     {% include text/research_publications.html %}
+    {% include snippets/research_publists.html
+        title="International Journals"
+        publist=site.data.journal_papers %}
+    {% include snippets/research_publists.html
+        title="Conference Papers"
+        publist=site.data.conference_papers %}
 
-
-    <h3>International Journals</h3>
-    <ul style="list-style-type:none">
-      {% for paper in site.data.journal_papers %}
-        <li style="padding-bottom:5px;">
-          <strong>({{paper.year}}) {{paper.title}}</strong>
-          <br>
-          {{paper.author}}. {{paper.journal}}. {{paper.volume}}. {{paper.pages}}.
-          <br>
-        </li>
-        &nbsp; &nbsp;
-        <a class="btn btn-xs btn-success" href="{{paper.link}}" target="_blank">View Online</a>
-        {% if paper.supplement %} <a class="btn btn-xs btn-warning" href="{{paper.supplement}}" target="_blank">Supplement Site</a> {% endif %}
-        <br><br>
-      {% endfor %}
-    </ul>
-
-    <h3>Conference Papers</h3>
-    <ul style="list-style-type:none">
-      {% for paper in site.data.conference_papers %}
-        <li style="padding-bottom:5px;">
-          <strong>({{paper.year}}) {{paper.title}}</strong>
-          <br>
-          {{paper.author}}. {{paper.journal}}. {{paper.volume}}. {{paper.pages}}.
-          <br>
-        </li>
-        &nbsp; &nbsp;
-        <a class="btn btn-xs btn-success" href="{{paper.link}}" target="_blank">View Online</a>
-        {% if paper.supplement %} <a class="btn btn-xs btn-warning" href="{{paper.supplement}}" target="_blank">Supplement Site</a> {% endif %}
-        <br><br>
-      {% endfor %}
-    </ul>
   </div><!-- end col -->
 </div><!-- end row -->
 
 <div class="row">
   <div class="col-md-12">
     <hr>
-    <h3>Research Projects</h3>
-    <ul>
-      {% for project in site.data.research_projects %}
-      <li><strong>{{project.name}}</strong> {{project.title}} Supporting Institution: {{project.institution}}. {{project.dates}}. Project Manager: {{project.manager}}</li>
-      {% endfor %}
-    </ul>
-    <hr>
+      {% include snippets/research_projects.html %}
+    <br>
+    <br>
   </div><!-- end col -->
 </div><!-- end row -->
