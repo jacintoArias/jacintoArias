@@ -1,5 +1,7 @@
 # Jacinto Arias Academic Website
 
+## NOTE: The website is offline and not maintained
+
 In this repository I host and maintain my personal website.
 
 It was designed long ago and hosted elsewhere, but I just wanted to learn [jekyll](http://jekyllrb.com) so I used this as an excuse.
